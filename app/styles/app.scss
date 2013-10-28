@@ -1,0 +1,163 @@
+$light-grey: #acacac;
+$dark-grey: #4c4c4c;
+$blue: #3B6BA0;
+$red: #D37777;
+
+html, body {
+  margin: 20px;
+}
+body {
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-size: 13px;
+  color: $dark-grey;
+}
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+}
+input, textarea {
+  outline: none;
+  border: 1px solid $light-grey;
+  padding: 5px;
+  font-size: inherit;
+  font-weight: inherit;
+  font: inherit;
+  margin: 0;
+  color: inherit;
+  width: 300px;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+// ::-moz-placeholder,
+// :-ms-input-placeholder,
+::-webkit-input-placeholder {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: inherit;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  border-bottom: 1px solid $light-grey;
+  background: lighten($light-grey, 28%);
+}
+#logo {
+  color: $dark-grey;
+  font-size: 24px;
+  font-weight: 300;
+  margin-left: 10px;
+}
+.btn {
+  border: 2px solid;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: $blue;
+  &:hover {
+    color: lighten($blue, 20%);
+    border-color: lighten($blue, 20%);
+  }
+  &:active {
+    color: lighten($blue, 30%);
+    border-color: lighten($blue, 30%);
+  }
+  &.red {
+    &:hover {
+      color: lighten($red, 10%);
+      border-color: lighten($red, 10%);
+    }
+    &:active {
+      color: lighten($red, 20%);
+      border-color: lighten($red, 20%);
+    }
+  }
+}
+.red {
+  color: $red;
+}
+#main {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#master {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 325px;
+  border-right: 1px solid $light-grey;
+  overflow-y: auto;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      border-bottom: 1px dotted $light-grey;
+      a {
+        padding: 20px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        &.active {
+          background: lighten($blue, 50%);
+        }
+      }
+    }
+  }
+}
+#detail {
+  position: absolute;
+  left: 325px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  overflow-y: auto;
+  h1 {
+    margin: 0;
+  }
+  .notes {
+    width: 500px;
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+  }
+  .none-selected {
+    font-size: 24px;
+    margin-top: 20%;
+    text-align: center;
+  }
+  .controls {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+}

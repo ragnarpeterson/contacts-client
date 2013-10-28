@@ -1,0 +1,12 @@
+<div class="contact">
+  <h1>{{name}}</h1>
+  <div class="clear"></div>
+  <h3>{{twitterDisplay}}</h3>
+  <div class="notes">
+    {{notes}}
+  </div>
+  <div class="controls">
+    {{#link-to 'contacts.edit' this class='btn'}}Edit{{/link-to}}
+    <button type="button" class="btn red" {{action 'deleteContact'}}>Delete</button>
+  </div>
+</div>

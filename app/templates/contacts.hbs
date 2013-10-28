@@ -1,0 +1,14 @@
+<div id="master">
+  <ul>
+    {{#each}}
+      <li class="contact">
+        {{#link-to 'contacts.show' this}}
+          {{name}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+<div id="detail">
+  {{outlet}}
+</div>

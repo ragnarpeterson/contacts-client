@@ -1,0 +1,12 @@
+<form {{action 'submit' on='submit'}}>
+  <h1>{{input type="text" placeholder="Name" value=contact.name}}</h1>
+  <div class="clear"></div>
+  <h3>{{input type="text" placeholder="Twitter" value=contact.twitter}}</h3>
+  <div class="notes">
+    {{textarea placeholder="Notes" value=contact.notes}}
+  </div>
+  <div class="controls">
+    <button type="submit" class="btn">{{saveText}}</button>
+    <button type="button" class="btn red" {{action 'cancel'}}>{{cancelText}}</button>
+  </div>
+</form>
